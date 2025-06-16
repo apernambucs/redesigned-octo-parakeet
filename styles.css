@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* Estilos Globais */
+body {
+    font-family: 'Roboto', sans-serif; /* Usaremos uma fonte sans-serif padrão por enquanto */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Um branco levemente acinzentado, mais minimalista */
+    color: #333; /* Cor de texto principal */
+}
+
+.container { /* Para centralizar o conteúdo */
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; /* Para conter floats */
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: #2c3e50; /* Um azul escuro acinzentado */
+    color: #fff; /* Texto branco no cabeçalho */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #1abc9c 3px solid; /* Um verde-azulado tecnológico */
+}
+
+header h1 { /* Estilo para o logo */
+    float: left;
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header a {
+    color: #ecf0f1; /* Um branco acinzentado */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: #1abc9c; /* Cor de hover para links */
+    font-weight: bold;
+}
+
+/* Seção Hero */
+#hero {
+    min-height: 400px;
+    background-color: #3498db; /* Um azul mais vibrante */
+    text-align: center;
+    color: #fff;
+    display: flex; /* Usando flexbox para centralizar o conteúdo verticalmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000000; /* Sombra para legibilidade */
+    font-family: 'Montserrat', sans-serif;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#hero button {
+    font-size: 18px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #16a085; /* Um tom mais escuro do verde-azulado */
+}
+
+/* Destaques de Serviços */
+#destaques-servicos {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#destaques-servicos h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#destaques-servicos .servico-item { /* Supondo que no HTML teremos divs com essa classe */
+    display: inline-block; /* Para alinhar lado a lado */
+    width: 30%; /* Ajustar conforme necessário, considerando margens/padding */
+    margin: 0 1.5%;
+    padding: 20px;
+    background: #ffffff; /* Fundo branco para o item */
+    border: 1px solid #ecf0f1; /* Borda sutil */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+    vertical-align: top; /* Alinhar pelo topo */
+    min-height: 150px; /* Altura mínima para consistência */
+}
+
+#destaques-servicos .servico-item h3 {
+    font-size: 22px;
+    color: #2c3e50; /* Azul escuro acinzentado para o título do serviço */
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Rodapé */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ecf0f1; /* Branco acinzentado para o texto */
+    background-color: #2c3e50; /* Azul escuro acinzentado para o fundo */
+    text-align: center;
+}
+
+/* Box Sizing para facilitar o layout */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos para títulos genéricos h1, h2, h3, h4 (se não sobrescritos) */
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas Médias (Tablets) */
+@media (max-width: 768px) {
+    header h1 { /* Logo */
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    header nav { /* Navegação */
+        float: none;
+        text-align: center;
+    }
+
+    header li {
+        display: block; /* Empilhar os links */
+        padding: 10px 0;
+        border-bottom: 1px dotted #444; /* Separador sutil */
+    }
+    header li:last-child {
+        border-bottom: none; /* Remover borda do último item */
+    }
+
+    #hero h2 {
+        font-size: 36px; /* Reduzir tamanho da fonte */
+    }
+
+    #hero p {
+        font-size: 18px; /* Reduzir tamanho da fonte */
+    }
+
+    #destaques-servicos .servico-item {
+        width: 90%; /* Ocupar mais largura */
+        margin: 10px auto; /* Centralizar e adicionar margem vertical */
+        display: block; /* Garantir que fiquem um abaixo do outro */
+    }
+
+    .container {
+        width: 90%; /* Aumentar a largura do container em telas menores */
+    }
+}
+
+/* Telas Pequenas (Smartphones) */
+@media (max-width: 500px) {
+    #hero {
+        min-height: 300px; /* Reduzir altura do hero */
+    }
+
+    #hero h2 {
+        font-size: 28px; /* Reduzir ainda mais a fonte */
+    }
+
+    #hero p {
+        font-size: 16px;
+    }
+
+    #hero button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    #destaques-servicos .servico-item {
+        width: 95%; /* Quase largura total */
+    }
+
+    /* Ajuste para o container em telas muito pequenas para evitar overflow */
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-flutuante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px; /* Tamanho do ícone/emoji */
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100; /* Para garantir que fique por cima */
+    display: flex; /* Para centralizar o ícone/emoji */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remover sublinhado do link */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-flutuante:hover {
+    transform: scale(1.1); /* Efeito de zoom no hover */
+}
